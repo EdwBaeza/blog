@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/EdwBaeza/blog-edwin-baeza/static/css/main.970b41a3.chunk.css",
+    "main.js": "/EdwBaeza/blog-edwin-baeza/static/js/main.4e4540b6.chunk.js",
+    "main.js.map": "/EdwBaeza/blog-edwin-baeza/static/js/main.4e4540b6.chunk.js.map",
+    "runtime-main.js": "/EdwBaeza/blog-edwin-baeza/static/js/runtime-main.17837367.js",
+    "runtime-main.js.map": "/EdwBaeza/blog-edwin-baeza/static/js/runtime-main.17837367.js.map",
+    "static/js/2.648d81db.chunk.js": "/EdwBaeza/blog-edwin-baeza/static/js/2.648d81db.chunk.js",
+    "static/js/2.648d81db.chunk.js.map": "/EdwBaeza/blog-edwin-baeza/static/js/2.648d81db.chunk.js.map",
+    "static/js/3.8840e449.chunk.js": "/EdwBaeza/blog-edwin-baeza/static/js/3.8840e449.chunk.js",
+    "static/js/3.8840e449.chunk.js.map": "/EdwBaeza/blog-edwin-baeza/static/js/3.8840e449.chunk.js.map",
+    "index.html": "/EdwBaeza/blog-edwin-baeza/index.html",
+    "static/css/main.970b41a3.chunk.css.map": "/EdwBaeza/blog-edwin-baeza/static/css/main.970b41a3.chunk.css.map",
+    "static/js/2.648d81db.chunk.js.LICENSE.txt": "/EdwBaeza/blog-edwin-baeza/static/js/2.648d81db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17837367.js",
+    "static/js/2.648d81db.chunk.js",
+    "static/css/main.970b41a3.chunk.css",
+    "static/js/main.4e4540b6.chunk.js"
+  ]
+}
