@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { GrReactjs } from "react-icons/gr";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [isUserMenuVisible, setUserMenuVisible] = useState(false);
-
+  const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -14,6 +15,9 @@ function Navbar() {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
+              onClick={() => {
+                setMobileMenuVisible(!isMobileMenuVisible);
+              }}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -71,12 +75,17 @@ function Navbar() {
                   >
                     About Me
                   </a>
-                  <a
-                    href="#"
+                  <Link
+                    to="myprojects"
+                    spy={true}
+                    smooth={true}
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    onClick={() => {
+                      setMobileMenuVisible(!isMobileMenuVisible);
+                    }}
                   >
                     Projects
-                  </a>
+                  </Link>
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -122,7 +131,7 @@ function Navbar() {
                   <span className="sr-only">Open user menu</span>
                   <img
                     className="h-8 w-8 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    src="./images/edwin.png"
                     alt=""
                   />
                 </button>
@@ -161,35 +170,41 @@ function Navbar() {
           </div>
         </div>
       </div>
-
-      <div className="sm:hidden" id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#"
-            className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            About Me
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Projects
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >
-            Contact
-          </a>
+      {isMobileMenuVisible && (
+        <div className="sm:hidden" id="mobile-menu">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="#"
+              className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Home
+            </a>
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              About Me
+            </a>
+            <Link
+              to="myprojects"
+              spy={true}
+              smooth={true}
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              onClick={() => {
+                setMobileMenuVisible(!isMobileMenuVisible);
+              }}
+            >
+              Projects
+            </Link>
+            <a
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Contact
+            </a>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 }

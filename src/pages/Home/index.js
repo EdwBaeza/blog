@@ -8,6 +8,7 @@ import getRepositories from "../../services/github/getRepositories";
 function Home() {
   const [repositories, setRepositories] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     async function fetchRepositories() {
       setIsLoading(true);
@@ -29,7 +30,7 @@ function Home() {
       </Helmet>
       <Navbar />
       <Banner />
-      {isLoading && <p>Loading</p>}
+      {isLoading && <p>Loading...</p>}
       {!isLoading && <ListOfRepositories repositories={repositories} />}
     </div>
   );
