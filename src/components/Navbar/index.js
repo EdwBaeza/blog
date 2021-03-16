@@ -124,9 +124,9 @@ function Navbar() {
                   id="user-menu"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  onClick={() => {
-                    setUserMenuVisible(!isUserMenuVisible);
-                  }}
+                  // onClick={() => {
+                  //   setUserMenuVisible(!isUserMenuVisible);
+                  // }}
                 >
                   <span className="sr-only">Open user menu</span>
                   <img

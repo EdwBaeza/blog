@@ -2,14 +2,14 @@ import React from "react";
 
 function Banner() {
   return (
-    <div className="relative bg-white overflow-hidden">
+    <div className="bg-white overflow-hidden">
       <div
-        className="bg-cover bg-no-repeat h-screen lg:w-full"
-        style={{ backgroundImage: "url('/blog/images/banner-bg.jpg')" }}
+        className="bg-lo h-72 bg-contain sm:bg-cover bg-no-repeat sm:h-screen"
+        style={{ backgroundImage: "url('/blog/images/banner-bg-v2.jpg')" }}
       >
-        <div className="w-full h-full flex justify-center items-start py-16 lg:items-center lg:pb-96">
-          <h1 className="font-serif font-semibold break-words text-center text-5xl text-gray-200 lg:h-2/5 lg:align-top">
-            Edwin Baeza Web Site
+        <div className="w-full">
+          <h1 className="relative top-10 font-serif font-semibold break-words text-center text-5xl text-gray-200 sm:top-72 sm:text-7xl">
+            Edwin Baeza
           </h1>
         </div>
       </div>
