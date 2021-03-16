@@ -8,7 +8,7 @@ function Banner() {
         style={{ backgroundImage: "url('/blog/images/banner-bg-v2.jpg')" }}
       >
         <div className="w-full">
-          <h1 className="relative top-10 font-serif font-semibold break-words text-center text-5xl text-gray-200 sm:top-72 sm:text-7xl">
+          <h1 className="relative top-24 font-serif font-semibold break-words text-center text-5xl text-gray-200 sm:top-72 sm:text-7xl">
             Edwin Baeza
           </h1>
         </div>
