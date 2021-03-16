@@ -2,7 +2,7 @@ import Repository from "../Repository";
 import SectionTitle from "../SectionTitle/";
 function ListOfRepositories({ repositories }) {
   const filteredRepositories = repositories.filter((item) => {
-    return item.fork !== true;
+    return !item.fork;
   });
   return (
     <>
