@@ -1,3 +1,5 @@
+import React from "react"
+
 function SectionTitle({ text, id }) {
   return (
     <h3

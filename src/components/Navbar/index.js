@@ -1,4 +1,4 @@
-import { useState } from "react";
+import  React, { useState } from "react";
 import { GrReactjs } from "react-icons/gr";
 import { Link } from "react-scroll";
 
@@ -79,7 +79,7 @@ function Navbar() {
                     to="myprojects"
                     spy={true}
                     smooth={true}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
                     onClick={() => {
                       setMobileMenuVisible(!isMobileMenuVisible);
                     }}
@@ -131,7 +131,7 @@ function Navbar() {
                   <span className="sr-only">Open user menu</span>
                   <img
                     className="h-8 w-8 rounded-full"
-                    src="/blog/images/edwin.png"
+                    src="images/edwin.png"
                     alt=""
                   />
                 </button>

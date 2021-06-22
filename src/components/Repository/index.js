@@ -1,5 +1,5 @@
 import React from "react";
-import BuildIcon from "../../utils/BuildIcons";
+import BuildIcon from "../../utils/IconBuilder";
 
 function Repository({ repository }) {
   return (
