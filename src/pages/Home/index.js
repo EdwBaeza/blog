@@ -13,7 +13,8 @@ function Home() {
     async function fetchRepositories() {
       setIsLoading(true);
       const { data } = await getRepositories();
-      setRepositories(data);setIsLoading(false);
+      setRepositories(data);
+      setIsLoading(false);
     }
     fetchRepositories();
   }, []);
