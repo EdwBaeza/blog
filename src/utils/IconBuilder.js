@@ -1,5 +1,5 @@
 import React from "react"
-import { SiJavascript, SiPython, SiGo, SiRuby, SiJava, SiPhp, SiKotlin, ImBlocked} from "react-icons/si";
+import { SiJavascript, SiPython, SiGo, SiRuby, SiJava, SiPhp, SiKotlin, ImBlocked } from "react-icons/si";
 import { FiXCircle } from "react-icons/fi";
 
 const defaultIconSize = "35";
