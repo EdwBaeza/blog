@@ -1,8 +1,8 @@
-import  React, { useState } from "react";
+import React, { useState } from "react";
 import { GrReactjs } from "react-icons/gr";
 import { Link } from "react-scroll";
 
-function Navbar() {
+export function Navbar() {
   const [isUserMenuVisible, setUserMenuVisible] = useState(false);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   return (
@@ -124,9 +124,6 @@ function Navbar() {
                   id="user-menu"
                   aria-expanded="false"
                   aria-haspopup="true"
-                  // onClick={() => {
-                  //   setUserMenuVisible(!isUserMenuVisible);
-                  // }}
                 >
                   <span className="sr-only">Open user menu</span>
                   <img
@@ -208,5 +205,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;

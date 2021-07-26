@@ -5,6 +5,13 @@ module.exports = {
     extend: {
       animation: {
         "spin-slow": "spin 3s linear infinite",
+        width: "width 1s ease-in-out 0.1s",
+      },
+      keyframes: {
+        width: {
+          "0%": { transform: "scaleX(0.0)" },
+          "100%": { transform: "scaleX(1.0)" },
+        },
       },
     },
   },

@@ -1,14 +1,12 @@
-import React from "react"
+import React from "react";
 
-function SectionTitle({ text, id }) {
+export function SectionTitle({ text, id }) {
   return (
-    <h3
-      className="font-serif text-center pt-16 pb-6 sm:py-10 text-4xl text-gray-600"
+    <h2
+      className="text-center mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
       id={id}
     >
       {text}
-    </h3>
+    </h2>
   );
 }
-
-export default SectionTitle;

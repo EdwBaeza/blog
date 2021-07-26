@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import Banner from "../../components/Banner";
+import { Banner } from "../../components/Banner";
+import { AboutMe } from "../../components/AboutMe";
+import { Skills } from "../../components/Skills";
 import ListOfRepositories from "../../components/ListOfRepositories";
-import Navbar from "../../components/Navbar";
 import getRepositories from "../../services/github/getRepositories";
 
 function Home() {
@@ -13,7 +14,8 @@ function Home() {
     async function fetchRepositories() {
       setIsLoading(true);
       const { data } = await getRepositories();
-      setRepositories(data);setIsLoading(false);
+      setRepositories(data);
+      setIsLoading(false);
     }
     fetchRepositories();
   }, []);
@@ -22,13 +24,11 @@ function Home() {
     <div>
       <Helmet>
         <title>Edwin Baeza Software Engineer</title>
-        <meta
-          name="description"
-          description="Blog personal de edwin baeza ingeniero de software"
-        />
+        <meta name="description" description="Edwin Baeza Software Engineer" />
       </Helmet>
-      <Navbar />
       <Banner />
+      <AboutMe />
+      <Skills />
       {isLoading && <p>Loading...</p>}
       {!isLoading && <ListOfRepositories repositories={repositories} />}
     </div>
