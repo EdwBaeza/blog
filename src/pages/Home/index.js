@@ -5,21 +5,10 @@ import { AboutMe } from "../../components/AboutMe";
 import { Skills } from "../../components/Skills";
 import ListOfRepositories from "../../components/ListOfRepositories";
 import getRepositories from "../../services/github/getRepositories";
+import { useRepositories } from "../../hooks/github/useRepositories";
 
 function Home() {
-  const [repositories, setRepositories] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    async function fetchRepositories() {
-      setIsLoading(true);
-      const { data } = await getRepositories();
-      setRepositories(data);
-      setIsLoading(false);
-    }
-    fetchRepositories();
-  }, []);
-
+  const repositories = useRepositories();
   return (
     <div>
       <Helmet>
@@ -29,8 +18,10 @@ function Home() {
       <Banner />
       <AboutMe />
       <Skills />
-      {isLoading && <p>Loading...</p>}
-      {!isLoading && <ListOfRepositories repositories={repositories} />}
+      {!repositories.length && <p>Loading...</p>}
+      {repositories.length && (
+        <ListOfRepositories repositories={repositories} />
+      )}
     </div>
   );
 }
