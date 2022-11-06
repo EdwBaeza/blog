@@ -24,8 +24,11 @@ const ICONS = {
   kotlin: <SiKotlin className="mx-auto" size={defaultIconSize} color="#1AA2D4" />,
 };
 
-function BuildIcon(key) {
-  const sanitizeKey = key.toLowerCase();
+function BuildIcon(language) {
+  if(!language){
+    return defaultIcon();
+  }
+  const sanitizeKey = language.toLowerCase();
   const iconBuilder = ICONS[sanitizeKey];
   return !iconBuilder ? defaultIcon() : iconBuilder;
 }
