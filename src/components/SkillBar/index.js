@@ -13,11 +13,6 @@ export function SkillBar({ skillName, percentage }) {
                 {skillName}
               </span>
             </div>
-            <div className="text-right">
-              <span className="text-xs font-semibold inline-block text-indigo-500">
-                {percentage}%
-              </span>
-            </div>
           </div>
           <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-indigo-200">
             <div

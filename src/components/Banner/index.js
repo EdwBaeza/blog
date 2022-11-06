@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import { GrReactjs } from "react-icons/gr";
 import { Link } from "react-scroll";
 
+const bannerInfo = {
+  title: 'Software Engineer',
+  name: 'Edwin Baeza',
+  summary: `I have a degree in computer systems engineering from the
+  Instituto Tecnológico de Mérida, I'm specialized in backend
+  software development, with experience in data engineering and
+  frontend, I'm passionate about innovation and technology
+  overall.`
+}
+
 export function Banner() {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   return (
@@ -32,8 +42,6 @@ export function Banner() {
                         size="40"
                         color="#4f46e5"
                       />
-                      {/* <span className="sr-only">Workflow</span>
-                    <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"/> */}
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
                       <button
@@ -41,7 +49,6 @@ export function Banner() {
                         className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                         aria-expanded="false"
                         onClick={() => {
-                          console.log(isMobileMenuVisible);
                           setMobileMenuVisible(!isMobileMenuVisible);
                         }}
                       >
@@ -67,7 +74,7 @@ export function Banner() {
                 </div>
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                   <a
-                    href="/"
+                    href="/blog"
                     className="font-medium text-gray-500 hover:text-gray-900"
                   >
                     Home
@@ -200,17 +207,13 @@ export function Banner() {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Software Engineer </span>
+                <span className="block xl:inline"> { bannerInfo.title } </span>
                 <span className="block text-indigo-600 xl:inline">
-                  Edwin Baeza
+                  { bannerInfo.name }
                 </span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                I have a degree in computer systems engineering from the
-                Instituto Tecnológico de Mérida, I'm specialized in backend
-                software development, with experience in data engineering and
-                frontend, I'm passionate about innovation and technology
-                overall.
+                { bannerInfo.summary }
               </p>
             </div>
           </main>

@@ -13,11 +13,11 @@ const SKILLS = [
   },
   {
     label: "Ruby",
-    value: 85,
+    value: 100,
   },
   {
     label: "Rails",
-    value: 85,
+    value: 95,
   },
   {
     label: "Docker",

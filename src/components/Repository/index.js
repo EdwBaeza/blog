@@ -1,6 +1,5 @@
 import React from "react";
 import BuildIcon from "../../utils/IconBuilder";
-import { SiGithub } from "react-icons/si";
 
 function Repository({ repository }) {
   return (

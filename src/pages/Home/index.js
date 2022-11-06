@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import { Banner } from "../../components/Banner";
 import { AboutMe } from "../../components/AboutMe";
 import { Skills } from "../../components/Skills";
 import ListOfRepositories from "../../components/ListOfRepositories";
-import getRepositories from "../../services/github/getRepositories";
 import { useRepositories } from "../../hooks/github/useRepositories";
 
 function Home() {
