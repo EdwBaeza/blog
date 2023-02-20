@@ -29,7 +29,7 @@ const SKILLS = [
   },
   {
     label: "Golang",
-    value: 85,
+    value: 90,
   },
   {
     label: "Echo",
